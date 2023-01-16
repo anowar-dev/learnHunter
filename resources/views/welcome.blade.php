@@ -18,7 +18,8 @@
 
         <lu>
             <li><a href="{{ url('about') }}">Anout</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="{{ route('contact') }}">contact</a></li>
+            <li><a href="{{ route('laravel') }}">Laravel</a></li>
         </lu>
 
     </body>

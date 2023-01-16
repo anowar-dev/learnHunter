@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\firstController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\secondController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +22,14 @@ Route::get('/', function () {
 Route::get('country', function(){
     return view('country');
 })->middleware('country');
+
+Route::get('/contact', [firstController::class, 'index'])->name('contact');
+Route::post('/student', [firstController::class, 'store'])->name('student.store');
+Route::get('/about', [firstController::class, 'about'])->name('about');
+Route::get('/test', [secondController::class, 'test']);
+Route::get('/laravel', [firstController::class, 'laravel'])->name('laravel');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
